@@ -1,4 +1,8 @@
 #!/bin/bash
-
 cd $(dirname $0)
-npm install --location=global ../../
+
+if command -v volta &>/dev/null; then
+    volta install "graphite-motion@../../"
+else
+    npm install --location=global ../../
+fi

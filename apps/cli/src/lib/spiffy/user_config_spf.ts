@@ -25,6 +25,7 @@ const schema = t.shape({
       })
     )
   ),
+  apiServer: t.optional(t.string),
 });
 
 export type TProfile = Required<
@@ -80,6 +81,8 @@ export const userConfigFactory = spiffy({
     };
 
     const getApiServerUrl = (): TApiServerUrl => {
+      const customHost = data.apiServer;
+      if (customHost != null) return customHost;
       const hostPrefix = getDefaultProfile().hostPrefix;
       return hostPrefix
         ? `https://api.${hostPrefix}.graphite.dev/v1`
