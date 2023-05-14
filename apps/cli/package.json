@@ -1,6 +1,6 @@
 {
   "name": "@withgraphite/graphite-cli",
-  "version": "0.20.19",
+  "version": "0.20.19-motion",
   "license": "None",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
@@ -59,7 +59,7 @@
   ],
   "bin": {
     "graphite": "dist/src/index.js",
-    "gt": "dist/src/index.js"
+    "gt": "dist/src/index.js",
   },
   "devDependencies": {
     "@types/chai": "^4.3.1",
